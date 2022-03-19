@@ -13,3 +13,5 @@ execute unless score <dgt_player.main> id matches 0.. run scoreboard players set
 schedule function dgt_player:update_players_marker 1t
 
 tellraw @a {"text":"Datapack dgt_player is loaded","color":"aqua"}
+
+execute as @a unless score @s playtime_ticks matches 4.. run tellraw @a [{"selector":"@s"},{"text":" playtime: "},{"score":{"name":"@s","objective":"playtime_ticks"}}]
